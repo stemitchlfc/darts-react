@@ -5,7 +5,7 @@ export default function Navbar() {
     <div className="navbar">
       <h2 className="nav-title">Darts App</h2>
       
-      <a classname="home-link" href="/">Home</a>
+      <a className="home-link" href="/">Home</a>
       
     </div>
   )

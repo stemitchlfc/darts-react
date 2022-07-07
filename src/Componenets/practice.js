@@ -3,17 +3,17 @@ import practicedata from "./practicedata";
 
 export default function Practice() {
   const [game, setGame] = useState({})
-  const [data, setData] = useState(null)
+  const [data, setData] = useState()
 
 
   useEffect(() => {
-    fetch('http://localhost:3005/practicegame/')
+    fetch('http://localhost:8080/practice/')
       .then(res => {
         return res.json()
       })
       .then((data) => {
         console.log(data)
-        setGame(data)
+        setGame(data[0])
 
       })
   }, [])
