@@ -12,7 +12,7 @@ export default function Homepage() {
         number of darts thrown will be shown to ensure you 
         know what your average was.
       </p>
-      <Link to="/practice">Practice Game</Link>
+      <Link to="/Practice">Practice Game</Link>
       <p>
         Bob's 27 is a double practice game which you start at
         double one and finish on Bullseye. For every double hit

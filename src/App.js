@@ -1,11 +1,14 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React, {useEffect, useState} from "react";
 import './App.css';
-import Practice from './Componenets/practice';
+import Practice from './Componenets/PracticeGame';
 import Navbar from './Componenets/navbar';
 import Homepage from './Componenets/Homepage';
 import Match from './Componenets/Match';
-import BobsTs from "./Componenets/BobsTs";
+import BobsTsPage from "./Componenets/BobsTsPage";
+import CreatePracticeGame from "./Componenets/CreatePracticeGame";
+import PracticeGame from "./Componenets/PracticeGame";
+import PracticePage from "./Componenets/PracticePage";
 
 
 function App() {
@@ -19,9 +22,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage/>} />
           
-        <Route path="/practice" element={<Practice/>} />
+        <Route path="/practice" element={<PracticePage />} />
         <Route path="/match" element={<Match />}></Route>
-        <Route path="/BobsTs" element={<BobsTs />} />
+        <Route path="/BobsTs" element={<BobsTsPage />} />
+        <Route path= "/CreatePractice" element={<CreatePracticeGame />} />
       </Routes>
       
       
