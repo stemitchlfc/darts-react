@@ -1,14 +1,15 @@
 import React, {useState, useEffect} from 'react'
 
-const BobsTsGame = () => {
+export default function BobsTsGame(props) {
   const [game, setGame] = useState({})
   const [data, setData] = useState("")
   const doubles = 1
   const doublesHit = null
-
+  const url = `http://localhost:8080/BobsTs/${props.id}`
+ 
 
   useEffect(() => {
-    fetch('http://localhost:8080/BobsTs/1')
+    fetch(url)
       .then(res => {
         return res.json()
       })
@@ -25,7 +26,7 @@ const BobsTsGame = () => {
     e.preventDefault()
     console.log('submitted')
     // const game = {name, remainingScore, score}
-    fetch('http://localhost:8080/BobsTs/1', {
+    fetch(url, {
       method: 'PUT',
       headers: {
         "Accept": "application/json",
@@ -39,7 +40,8 @@ const BobsTsGame = () => {
         setData("") 
         setGame({ ...game, 
                 score: data.score, 
-                doublesHit: data.doublesHit 
+                doublesHit: data.doublesHit, 
+                doubles: data.doubles
                 })
       })
   }
@@ -50,7 +52,8 @@ const BobsTsGame = () => {
       <nav className="practice-nav">
         <h2>Darts Practice</h2>
       </nav>
-
+      <div>your id is {props.id}</div>
+      <div>{url}</div>
       <main className="practice-nav">
         <div className="player-name">{game.name}, your remaining score is:</div>
         <div className="practice-rem-score">{game.score}</div>
@@ -58,7 +61,7 @@ const BobsTsGame = () => {
           <input type="number" value={data} onChange={(e) => setData(e.target.value)} />
           <button onClick={handleSubmitBob} type="button">Submit Score</button>
         </form>
-        <div>You are aiming for double {doubles}</div>
+        <div>You are aiming for double {game.doubles}</div>
         <div>{doublesHit}</div>
         {game.gameLost && <div>GAME OVER</div>}
         {game.gameWon && <div>GAME OVER</div>}
@@ -69,4 +72,3 @@ const BobsTsGame = () => {
   ) ;
 }
  
-export default BobsTsGame;

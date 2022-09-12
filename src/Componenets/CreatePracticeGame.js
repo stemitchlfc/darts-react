@@ -67,7 +67,7 @@ const CreatePracticeGame = () => {
       </form>
       <button onClick={handleSubmit} type="button">Create Game</button>
       
-      { gameOn && <PracticeGame id={game.id}/>      }
+      { gameOn && <PracticeGame id={returnData.id} />      }
     </div>
    );
 }

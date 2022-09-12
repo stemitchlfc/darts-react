@@ -10,6 +10,8 @@ export default function CreateBobsTsGame() {
   const [remainingScore, setRemainingScore] = useState()
   const [gameOn, setGameOn] = useState(false)
   
+  const url = `http://localhost:8080/BobsTs/${game.id}`
+  
   const doublesHit = 0
 
   const handleSubmit = (e) =>{
@@ -37,9 +39,11 @@ export default function CreateBobsTsGame() {
         console.log(data)
         console.log(data.id)
         setReturnData(data)
+        console.log(returnData.id)
         console.log(data)
         console.log(data.id)
         setGame(game)
+        console.log(game.id)
         setGameOn(true)
       })}
     
@@ -53,7 +57,8 @@ export default function CreateBobsTsGame() {
         <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
         <button onClick={handleSubmit} type="button">Create Game</button>      
       </form>
-      {gameOn && <BobsTsGame />}
+      <div>your id is {game.id}</div>
+      {gameOn && <BobsTsGame id={returnData.id}/>}
     </div>
   )
 }

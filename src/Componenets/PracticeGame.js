@@ -5,13 +5,12 @@ export default function PracticeGame(props) {
   const [game, setGame] = useState({})
   const [data, setData] = useState()
   const [dartsCounted, setDartsCounted] =useState(false)
-  const url = `http://localhost:8080/practice/${id}`
-  const id = props.id
+  const url = `http://localhost:8080/practice/${props.id}`
+  
 
   useEffect(() => {
-    console.log(id)
     console.log(url)
-    console.log(props.id)
+
     fetch(url)
       .then(res => {
         return res.json()
