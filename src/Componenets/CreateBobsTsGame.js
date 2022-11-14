@@ -57,7 +57,7 @@ export default function CreateBobsTsGame() {
         <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
         <button onClick={handleSubmit} type="button">Create Game</button>      
       </form>
-      <div>your id is {game.id}</div>
+      
       {gameOn && <BobsTsGame id={returnData.id}/>}
     </div>
   )

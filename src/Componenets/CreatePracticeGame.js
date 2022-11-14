@@ -49,12 +49,15 @@ const CreatePracticeGame = () => {
 
   return ( 
     <div>
-      <div>To create a practice game please enter your name:</div>
-      <form>
-        <label>Name of Player</label>
-        <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+      <div className="create-prac">
+        <h2>Create a Practice Game</h2>
+      <div className="create-prac-text">To create a practice game please enter your name:</div>
+      <form className="create-form">
+        <label className="create-text">Name of Player</label>
+        <input className='create-input' type="text" value={name} onChange={(e) => setName(e.target.value)} />
         <label>Starting Score</label>
-        <select 
+        <select  
+            className="create-score"
             type="number" 
             value={remainingScore}
             onChange={(e) => setRemainingScore(e.target.value)}
@@ -65,8 +68,8 @@ const CreatePracticeGame = () => {
         </select>
         
       </form>
-      <button onClick={handleSubmit} type="button">Create Game</button>
-      
+      <button className='create-submit' onClick={handleSubmit} type="button">Create Game</button>
+    </div>  
       { gameOn && <PracticeGame id={returnData.id} />      }
     </div>
    );

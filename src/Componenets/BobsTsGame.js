@@ -40,8 +40,10 @@ export default function BobsTsGame(props) {
         setData("") 
         setGame({ ...game, 
                 score: data.score, 
-                doublesHit: data.doublesHit, 
-                doubles: data.doubles
+                doubles: data.doubles,
+                gameLost: data.gameLost,
+                gameWon: data.gameWon,
+                doublesHit: data.doublesHit
                 })
       })
   }
@@ -52,19 +54,18 @@ export default function BobsTsGame(props) {
       <nav className="practice-nav">
         <h2>Darts Practice</h2>
       </nav>
-      <div>your id is {props.id}</div>
-      <div>{url}</div>
       <main className="practice-nav">
         <div className="player-name">{game.name}, your remaining score is:</div>
         <div className="practice-rem-score">{game.score}</div>
         <form>
-          <input type="number" value={data} onChange={(e) => setData(e.target.value)} />
+          <input type="number" max={3} value={data} onChange={(e) => setData(e.target.value)} />
           <button onClick={handleSubmitBob} type="button">Submit Score</button>
         </form>
-        <div>You are aiming for double {game.doubles}</div>
+        {game.doubles<=20 && <div>You are aiming for double {game.doubles}</div>}
+        {game.doubles>20 && <div>You are aiming for the Bullseye</div>}
         <div>{doublesHit}</div>
         {game.gameLost && <div>GAME OVER</div>}
-        {game.gameWon && <div>GAME OVER</div>}
+        {game.gameWon && <div>GAME WON, you won with a score of {game.score}!!!</div>}
       </main>
 
 

@@ -4,7 +4,7 @@ import './App.css';
 import Practice from './Componenets/PracticeGame';
 import Navbar from './Componenets/navbar';
 import Homepage from './Componenets/Homepage';
-import Match from './Componenets/Match';
+
 import BobsTsPage from "./Componenets/BobsTsPage";
 import CreatePracticeGame from "./Componenets/CreatePracticeGame";
 import PracticeGame from "./Componenets/PracticeGame";
@@ -23,7 +23,7 @@ function App() {
         <Route path="/" element={<Homepage/>} />
           
         <Route path="/practice" element={<PracticePage />} />
-        <Route path="/match" element={<Match />}></Route>
+        
         <Route path="/BobsTs" element={<BobsTsPage />} />
         <Route path= "/CreatePractice" element={<CreatePracticeGame />} />
       </Routes>

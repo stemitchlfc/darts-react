@@ -6,13 +6,16 @@ export default function Homepage() {
   return (
     <div>
       <div className="home-div">
-      <h2>Homepage</h2>
-      <p>This is a practice game with a single player to
+      <div className="fzo-home">
+      <p>
+        This is a practice game with a single player to
         play one leg of 501. At the end of each leg the
         number of darts thrown will be shown to ensure you 
         know what your average was.
       </p>
-      <Link to="/Practice">Practice Game</Link>
+      <Link className='prac-button' to="/Practice">Practice Game</Link>
+      </div>
+      <div className="bts-home">
       <p>
         Bob's 27 is a double practice game which you start at
         double one and finish on Bullseye. For every double hit
@@ -20,15 +23,10 @@ export default function Homepage() {
         have the score taken away from your current score. Aim is to 
         finish the game and not get to 0.
       </p>
-      <Link to="/BobsTs">Bob's 27 Game</Link>
-      <p>
-        A head to head match between two players, you input the players
-        names and then play head to head for best of 3 legs. At the
-        end you get to see what your average was.
-      </p>
-      <Link to="/match">Head to Head Match</Link>
+      <Link className='bob-button' to="/BobsTs">Bob's 27 Game</Link>
       </div>
-    </div>
+      </div>
+    </div>  
   );
 }
  

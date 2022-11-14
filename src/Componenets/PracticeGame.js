@@ -69,7 +69,7 @@ export default function PracticeGame(props) {
   }
 
   return (
-    <div>
+    <div className="practice-game">
       <nav className="practice-nav">
         <h2>Darts Practice</h2>
       </nav>

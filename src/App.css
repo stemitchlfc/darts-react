@@ -23,4 +23,108 @@
   font-weight: 500;
   font-weight: lighter;
   position: relative;
+  color: red;
+
+  text-align: center;
+
+
+}
+
+.home-div{
+  display: grid;
+  margin-left: 1rem;
+  width: 700px;
+  border-radius: 2px;
+  
+}
+
+.fzo-home{
+  text-align: center;
+  border-style: solid;
+  padding: 10px;
+  margin: 2px;
+  bottom: 20px;
+  background: linear-gradient(90deg, red 1.18%, green 100%);
+} 
+
+.bts-home{
+  text-align: center;
+  border-style: solid;
+  padding: 10px;
+  margin: 2px;
+  bottom: 20px;
+  background: linear-gradient(90deg, red 1.18%, green 100%);
+}
+
+.prac-button{
+  size: 3px;
+  color: green;
+  border-style: solid;
+  text-align: center;
+  border-radius: 10px;
+  background-color: black;
+  border-color: black;
+}
+
+.bob-button{
+  size: 3px;
+  color: red;
+  border-style: solid;
+  text-align: center;
+  border-radius: 10px;
+  background-color: black;
+  border-color: black;
+}
+
+
+.create-prac{
+  display: grid;
+  padding: 10px;
+}
+
+.create-prac h2{
+  text-align: center;
+}
+
+.create-submit{
+  width: 70%;
+  position: absolute;
+  top: 280px;
+  left: 15%;
+}
+
+.create-prac-text{
+  text-align: center;
+  padding: 5px;
+}
+
+.create-form{
+  padding: 15px;
+  position: absolute;
+  top: 220px;
+  left: 10%;
+  
+}
+
+.create-text{
+
+}
+
+.create-input{
+
+}
+
+.create-score{
+  
+}
+
+.practice-game{
+  display: grid;
+  position: absolute;
+  top: 330px;
+  width: 100%;
+}
+
+.practice-nav{
+  text-align: center;
 }
