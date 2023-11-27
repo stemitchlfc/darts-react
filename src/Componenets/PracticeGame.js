@@ -10,7 +10,6 @@ export default function PracticeGame(props) {
 
   useEffect(() => {
     console.log(url)
-
     fetch(url)
       .then(res => {
         return res.json()
